@@ -1,0 +1,18 @@
+# .NET
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Build files
+*.dll
+*.exe
+*Published/
