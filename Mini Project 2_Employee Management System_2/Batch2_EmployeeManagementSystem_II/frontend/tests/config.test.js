@@ -1,0 +1,1 @@
+require('../js/config.js'); describe('Config',()=>{ test('has api url',()=>{ expect(Config.API_BASE_URL).toContain('http://localhost:5044/api');}); test('has positive page size',()=>{ expect(Config.PAGE_SIZE).toBeGreaterThan(0);}); test('exports object',()=>{ expect(typeof Config).toBe('object');});});

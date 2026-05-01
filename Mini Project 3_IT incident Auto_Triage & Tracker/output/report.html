@@ -1,0 +1,347 @@
+
+        <html>
+        <head>
+        <style>
+            html, body {
+                height: auto;
+                overflow-y: auto;
+            }
+
+            body {
+                font-family: Segoe UI, Arial;
+                background: #f5f7fb;
+                margin: 20px;
+            }
+
+            .header {
+                background: #1c3d6e;
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+
+            .header h1 {
+                margin: 0;
+                font-size: 26px;
+            }
+
+            .header p {
+                margin: 5px 0 0;
+                font-size: 14px;
+            }
+
+            .card {
+                background: white;
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+
+            .summary {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .summary-box {
+                background: white;
+                width: 130px;
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+
+            .summary-box h2 {
+                margin: 0;
+                color: #1c3d6e;
+            }
+
+            .summary-box p {
+                margin: 5px 0 0;
+                font-size: 13px;
+                color: #555;
+            }
+
+            .badge {
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin: 2px;
+                display: inline-block;
+            }
+
+            .network { background: #d0ebff; }
+            .security { background: #ffe3e3; }
+            .app { background: #e6fcf5; }
+
+            .critical { background: #ff4d4d; color: white; }
+            .high { background: #ffa94d; }
+            .medium { background: #ffd43b; }
+            .low { background: #69db7c; }
+
+            .table-container {
+                overflow-x: auto;
+                margin-bottom: 50px;   /* ✅ prevents cut-off */
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background: white;
+            }
+
+            th {
+                background: #1c3d6e;
+                color: white;
+                padding: 10px;
+                position: sticky;     /* ✅ nice improvement */
+                top: 0;
+            }
+
+            td {
+                padding: 8px;
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background: #f1f3f5;
+            }
+
+            .ticket {
+                background: #e7f5ff;
+                padding: 3px 6px;
+                border-radius: 6px;
+                font-size: 12px;
+                margin: 2px;
+                display: inline-block;
+            }
+        </style>
+        </head>
+
+        <body>
+
+        <div class="header">
+            <h1>IT Incident Auto-Triage Report</h1>
+            <p>Generated: 2026-04-29 14:41 | Total Incidents: 12</p>
+        </div>
+
+        <h2>Summary</h2>
+        <div class="summary">
+            <div class="summary-box">
+                <h2>12</h2>
+                <p>Total Incidents</p>
+            </div>
+            <div class="summary-box">
+                <h2>4</h2>
+                <p>Critical</p>
+            </div>
+            <div class="summary-box">
+                <h2>1</h2>
+                <p>High</p>
+            </div>
+            <div class="summary-box">
+                <h2>3</h2>
+                <p>Security Incidents</p>
+            </div>
+        </div>
+
+        <h2>Breakdown by Type</h2>
+        <div class="card">
+            <span class="badge network">network: 4</span><span class="badge security">security: 3</span><span class="badge app">app: 3</span><span class="badge general">general: 2</span>
+        </div>
+
+        <h2>Breakdown by Severity</h2>
+        <div class="card">
+            <span class="badge critical">critical: 4</span><span class="badge high">high: 1</span><span class="badge medium">medium: 4</span><span class="badge low">low: 3</span>
+        </div>
+
+        <h2>Breakdown by Team</h2>
+        <div class="card">
+            <span class="badge network">DB Team: 1</span><span class="badge network">Network: 3</span><span class="badge network">Security: 4</span><span class="badge network">App Team: 4</span>
+        </div>
+
+        <h2>Incident Details</h2>
+
+        <div class="table-container">
+        <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Severity</th>
+            <th>Type</th>
+            <th>Team</th>
+            <th>Timestamp</th>
+            <th>Tickets</th>
+        </tr>
+        
+            <tr>
+                <td>INC001</td>
+                <td>Database connection timeout on prod-db-01</td>
+                <td><span class="badge critical">CRITICAL</span></td>
+                <td><span class="badge network">network</span></td>
+                <td>DB Team</td>
+                <td>2025-04-20 10:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC001</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC001</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC001</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC004</td>
+                <td>Network switch offline in DC rack B</td>
+                <td><span class="badge critical">CRITICAL</span></td>
+                <td><span class="badge network">network</span></td>
+                <td>Network</td>
+                <td>2025-04-20 13:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC004</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC004</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC004</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC005</td>
+                <td>Ransomware signature detected on workstation</td>
+                <td><span class="badge critical">CRITICAL</span></td>
+                <td><span class="badge security">security</span></td>
+                <td>Security</td>
+                <td>2025-04-20 14:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC005</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC005</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC005</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC010</td>
+                <td>Scheduled job failed in non-production</td>
+                <td><span class="badge critical">CRITICAL</span></td>
+                <td><span class="badge app">app</span></td>
+                <td>App Team</td>
+                <td>2025-04-20 19:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC010</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC010</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC010</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC006</td>
+                <td>Payment gateway timeout â€” Stripe API HTTP-503</td>
+                <td><span class="badge high">HIGH</span></td>
+                <td><span class="badge app">app</span></td>
+                <td>App Team</td>
+                <td>2025-04-20 15:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC006</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC006</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC006</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC007</td>
+                <td>Intermittent packet loss on VLAN 30</td>
+                <td><span class="badge medium">MEDIUM</span></td>
+                <td><span class="badge network">network</span></td>
+                <td>Network</td>
+                <td>2025-04-20 16:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC007</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC007</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC007</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC009</td>
+                <td>API response slow â€” latency issue</td>
+                <td><span class="badge medium">MEDIUM</span></td>
+                <td><span class="badge general">general</span></td>
+                <td>App Team</td>
+                <td>2025-04-20 18:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC009</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC009</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC009</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC011</td>
+                <td>Firewall rule misconfiguration detected</td>
+                <td><span class="badge medium">MEDIUM</span></td>
+                <td><span class="badge general">general</span></td>
+                <td>Security</td>
+                <td>2025-04-20 20:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC011</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC011</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC011</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC012</td>
+                <td>DNS resolution intermittent on 10.2.0.0/16</td>
+                <td><span class="badge medium">MEDIUM</span></td>
+                <td><span class="badge network">network</span></td>
+                <td>Network</td>
+                <td>2025-04-20 21:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC012</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC012</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC012</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC002</td>
+                <td>Suspicious login attempts from unknown IP</td>
+                <td><span class="badge low">LOW</span></td>
+                <td><span class="badge security">security</span></td>
+                <td>Security</td>
+                <td>2025-04-20 11:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC002</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC002</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC002</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC003</td>
+                <td>Checkout service NullPointerException</td>
+                <td><span class="badge low">LOW</span></td>
+                <td><span class="badge app">app</span></td>
+                <td>App Team</td>
+                <td>2025-04-20 12:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC003</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC003</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC003</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>INC008</td>
+                <td>Phishing email reported by employees</td>
+                <td><span class="badge low">LOW</span></td>
+                <td><span class="badge security">security</span></td>
+                <td>Security</td>
+                <td>2025-04-20 17:00</td>
+                <td>
+                    <span class="ticket">SNOW: MOCK-SNOW-INC008</span>
+                    <span class="ticket">JIRA: MOCK-JIRA-INC008</span>
+                    <span class="ticket">AZURE: MOCK-AZURE-INC008</span>
+                </td>
+            </tr>
+            </table></div></body></html>

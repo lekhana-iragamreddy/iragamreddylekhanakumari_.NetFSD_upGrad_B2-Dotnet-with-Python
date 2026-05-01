@@ -1,0 +1,365 @@
+
+body {
+    background: #fff7ed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.app-main {
+    background:#fff7ed;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.auth-card {
+    margin-top: 60px;
+    border-radius: 22px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.auth-card .card-header {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}
+
+.dashboard-card {
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.dashboard-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+}
+
+.kpi-total {
+    background: linear-gradient(135deg, #0d6efd, #3b82f6);
+}
+
+.kpi-active {
+    background: linear-gradient(135deg, #198754, #22c55e);
+}
+
+.kpi-inactive {
+    background: linear-gradient(135deg, #dc3545, #f43f5e);
+}
+
+.kpi-departments {
+    background: linear-gradient(135deg, #fd7e14, #f59e0b);
+}
+
+.dashboard-card .card-body i {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.dashboard-card h3 {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #111827, #1f2937, #312e81) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: #fff !important;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.82) !important;
+    transition: 0.2s ease;
+    border-radius: 10px;
+    padding: 8px 14px !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff !important;
+}
+
+.table-container,
+.card,
+.modal-content,
+.toast {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    border-top-left-radius: 18px !important;
+    border-top-right-radius: 18px !important;
+    font-weight: 600;
+}
+
+.table {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.table thead {
+    background: linear-gradient(90deg, #4338ca, #6366f1);
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8faff;
+}
+
+.table tbody tr:hover {
+    background-color: #eef4ff;
+    transition: 0.2s ease;
+}
+
+.badge-department,
+.badge-status {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.department-engineering {
+    background: linear-gradient(90deg, #dbeafe, #bfdbfe);
+    color: #1d4ed8;
+}
+
+.department-marketing {
+    background: linear-gradient(90deg, #fef3c7, #fde68a);
+    color: #b45309;
+}
+
+.department-hr {
+    background: linear-gradient(90deg, #fce7f3, #fbcfe8);
+    color: #be185d;
+}
+
+.department-finance {
+    background: linear-gradient(90deg, #dcfce7, #bbf7d0);
+    color: #15803d;
+}
+
+.department-operations {
+    background: linear-gradient(90deg, #ede9fe, #ddd6fe);
+    color: #6d28d9;
+}
+
+.status-active {
+    background: linear-gradient(90deg, #d1fae5, #a7f3d0);
+    color: #047857;
+}
+
+.status-inactive {
+    background: linear-gradient(90deg, #fee2e2, #fecaca);
+    color: #b91c1c;
+}
+
+.breakdown-row {
+    margin-bottom: 16px;
+}
+
+.breakdown-label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.breakdown-bar-wrap {
+    background-color: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+    height: 18px;
+}
+
+.breakdown-bar {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+}
+
+.recent-employee-item {
+    border-bottom: 1px solid #edf2f7;
+    padding: 14px 0;
+}
+
+.recent-employee-item:last-child {
+    border-bottom: none;
+}
+
+.modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+    border: none;
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #dc2626, #f43f5e);
+    border: none;
+}
+
+.btn-warning {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-warning:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.2);
+}
+
+.error-message {
+    min-height: 18px;
+    font-size: 0.85rem;
+}
+
+.empty-state {
+    text-align: center;
+    color: #6b7280;
+    padding: 24px 0;
+    font-weight: 500;
+}
+
+.action-btns .btn {
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+#toastContainer .toast {
+    border-radius: 14px;
+}
+
+.section-title {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+@media (max-width: 991px) {
+    .app-main {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 767px) {
+    .auth-card {
+        margin-top: 20px;
+    }
+
+    .app-main {
+        padding-top: 85px;
+    }
+
+    .dashboard-card {
+        margin-bottom: 14px;
+    }
+}
+
+
+
+/* Custom Blue Background from Image */
+ #authSection {
+    background-color: lightblue;
+}
+.bg-light-blue {
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+}
+
+.text-dark-blue {
+    color: #ffffff;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+} 
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    background-color: #3b82f6 !important; /* The blue in the image */
+ } 
+
+ .input-group-text { 
+     color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    border: none;
+}
+
+#activeEmployeesCount {
+    color: green;
+}
+#totalEmployeesCount {
+    color: blue;
+}
+#inactiveEmployeesCount {
+    color: red;
+}
+#departmentCount {
+    color: orange;
+}
+
